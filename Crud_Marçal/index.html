@@ -19,8 +19,8 @@
         <h2 class="body">Cadastro de remédios manipulados</h2>
     </header>
     <main>
-        <button type="button" class="button blue mobile" id="cadastrarRemédio">Cadastrar Remédio</button>
-        <table class="records">
+        <button type="button" class="button blue mobile" id="cadastrarRemedio">Cadastrar Remédio</button>
+        <table id="tableRemedio" class="records">
             <thead>
                 <tr>
                     <th>Nome do medicamento</th>
@@ -28,31 +28,32 @@
                     <th>Gramas por sachê/cápsula (se tiver)</th>
                     <th>Gramas total</th>
                     <th>CRF</th>
+                    <th>Ação</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Creatina Monohidratada Pura</td>
-                    <td>Não</td>
-                    <td>n</td>
-                    <td>150g</td>
-                    <td>2276</td>
-                    <td>
-                        <button type="button" class="button green">editar</button>
-                        <button type="button" class="button red">excluir</button>
-                    </td>
-                </tr>
-                <tr>
+                <!--<tr>
                     <td>Betalanina</td>
                     <td>Sim</td>
-                    <td>5g</td>
-                    <td>150g</td>
-                    <td>2375</td>
+                    <td>5</td>
+                    <td>150</td>
+                    <td>25845</td>
                     <td>
-                        <button type="button" class="button green">editar</button>
-                        <button type="button" class="button red">excluir</button>
+                        <button type="button" class ="button green">editar</button>
+                        <button type="button" class ="button red">excluir</button>
                     </td>
                 </tr>
+                <tr>
+                    <td>Creatina Monohidratada</td>
+                    <td>não</td>
+                    <td>0</td>
+                    <td>300</td>
+                    <td>24589</td>
+                    <td>
+                        <button type="button" class ="button green">editar</button>
+                        <button type="button" class ="button red">excluir</button>
+                    </td>
+                </tr> -->
             </tbody>
         </table>
         <div class="modal" id="modal">
@@ -61,16 +62,16 @@
                     <h2>Novo Produto</h2>
                     <span class="modal-close" id="modalClose">&#10006;</span>
                 </header>
-                <form class="modal-form">
-                    <input type="text" class="modal-field" placeholder="Nome do medicamento">
-                    <input type="email" class="modal-field" placeholder="Tem sachê ou cápsula?">
-                    <input type="text" class="modal-field" placeholder="Gramas por sachê/cápsula (se tiver)">
-                    <input type="text" class="modal-field" placeholder="Gramas total">
-                    <input type="text" class="modal-field" placeholder="CRF" >
+                <form id= "form" class="modal-form">
+                    <input type="text" id="nomeDoMedicamento" data-index="new" class="modal-field" placeholder="Nome do medicamento" required>
+                    <input type="text" id="SacheOuCapsula" class="modal-field" placeholder="Tem sachê ou cápsula?">
+                    <input type="text" id="Gramas" class="modal-field" placeholder="Gramas por sachê/cápsula (se tiver)">
+                    <input type="text" id="GramasTotal" class="modal-field" placeholder="Gramas total" required>
+                    <input type="text" id="CRF" class="modal-field" placeholder="CRF" >
                 </form>
                 <footer class="modal-footer">
-                    <button class="button green">Salvar</button>
-                    <button class="button blue">Cancelar</button>
+                    <button id="Salvar" class="button green">Salvar</button>
+                    <button id="Cancelar" class="button blue">Cancelar</button>
                 </footer>
             </div>
         </div>
